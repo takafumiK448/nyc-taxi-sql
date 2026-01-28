@@ -12,5 +12,4 @@ and /*フィルタリング条件*/ /*乗車時刻に異常なし*/ dropoff_date
 and /*走行距離>0,合計金額>0,運賃>0*/ trip_distance>0 and total_amount>0 and fare_amount>0 
 and /*乗客数>0*/ passenger_count > 0
 group by pickup_date, pickup_hour, pickup_location_id
-order by trips desc
-limit 20;
+order by trips desc;
