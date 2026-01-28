@@ -34,3 +34,7 @@ BigQuery の公開データ（NYC Yellow Taxi Trips）を使い、集計SQLと�
 - `sql/extract_final.sql`：集計SQL
 - `sql/validation_v0.sql`：品質チェックSQL
 - `output/sample_output.csv`：出力例（上位100行）
+
+## 実行手順
+BigQueryのQuery editorで `sql/extract_final.sql` / `sql/validation_v0.sql` を実行する。
+結果例は `output/sample_output.csv` を参照する。
