@@ -20,7 +20,7 @@ BigQuery の公開データ（NYC Yellow Taxi Trips）を使い、集計SQLと�
 ## データ品質フィルタ（extract_final）
 集計を歪めやすいデータを除外。
 フィルターの根拠(対象期間のレコード数=1369753件に対して)
-  dropoff<pickup: 5642（レコード数に対する割合　0.41%), trip_distance<=0: 19951（1.46%）
+  dropoff<pickup: 5642（0.41%), trip_distance<=0: 19951（1.46%）
   total_amount<=0: 7113（0.52%）, fare_amount<=0: 7410（0.54%）
   上記は実際の運行として不適切なため除外した。
 
