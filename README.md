@@ -18,7 +18,12 @@ BigQuery の公開データ（NYC Yellow Taxi Trips）を使い、集計SQLと�
 - avg_total_amount：平均請求額（AVG(total_amount)）
 
 ## データ品質フィルタ（extract_final）
-集計を歪めやすいデータを除外しました。
+集計を歪めやすいデータを除外。
+フィルターの根拠(対象期間のレコード数=1369753件に対して)
+  dropoff<pickup: 5642（レコード数に対する割合　0.41%), trip_distance<=0: 19951（1.46%）
+  total_amount<=0: 7113（0.52%）, fare_amount<=0: 7410（0.54%）
+  上記は実際の運行として不適切なため除外した。
+
 - dropoff_datetime >= pickup_datetime（時刻矛盾除外）
 - trip_distance > 0（距離0以下除外）
 - total_amount > 0（合計金額0以下除外）
